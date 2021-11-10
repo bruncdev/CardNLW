@@ -21,7 +21,7 @@
           <img src="images/foto1.jpg" alt="Foto pessoal" />
         </div>
 
-        <h1>Bruno César</h1>
+        <h1 id="userName">Bruno César</h1>
         <a href="https://github.com/nwplul" target="_blank">
           <img src="images/github .svg" alt="Icone github" />
           nwplul</a
@@ -29,13 +29,13 @@
 
         <p>Streamer, Dev e Designer amante da tecnologia e jogos.</p>
 
-        <ul>
-          <li>
+        <ul id="socialLinks">
+          <li class="instagram">
             <a href="https://www.instagram.com/_burnc/" target="_blank">
               <img src="images/instagram.svg" alt="Icone instagram" />
             </a>
           </li>
-          <li>
+          <li class="twitter">
             <a href="https://twitter.com/nwplul" target="_blank">
               <img src="images/twitter.svg" alt="Icone twitter" />
             </a>
@@ -43,5 +43,22 @@
         </ul>
       </div>
     </main>
+
+    <script>
+      const LinksSocialMedia = {
+        github: 'nwplul',
+        instagram: '_burnc',
+        twitter: 'nwplul'
+      }
+
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          // const social = li.getAttribute('class')
+          alert(li.children[0].href)
+        }
+      }
+
+      changeSocialMediaLinks()
+    </script>
   </body>
 </html>
